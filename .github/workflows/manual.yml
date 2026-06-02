@@ -47,6 +47,10 @@ jobs:
       - name: Install Playwright browsers
         run: |
           python -m playwright install --with-deps chromium
+          
+      - name: Install dependencies
+        run: |
+          pip install pytest requests jsonschema allure-pytest
 
       - name: Run tests
         run: |
